@@ -40,7 +40,7 @@ public class WebPage {
         driver.get("https://www.demoblaze.com/index.html");
     }
 
-//  Checkout Phone
+    //  Checkout Phone
     public void setPhone_section() {
         driver.findElement(phone_section).click();
     }
@@ -53,7 +53,7 @@ public class WebPage {
         driver.findElement(addPhoneToCart).click();
     }
 
-//    Checkout Laptop
+    //    Checkout Laptop
     public void setLaptop_section() {
         driver.findElement(laptop_section).click();
     }
@@ -66,16 +66,16 @@ public class WebPage {
         driver.findElement(addLaptopToCart).click();
     }
 
-//    Checkout Monitor
-    public void setMonitor_section(){
+    //    Checkout Monitor
+    public void setMonitor_section() {
         driver.findElement(monitor_section).click();
     }
 
-    public void setSelectMonitor(){
+    public void setSelectMonitor() {
         driver.findElement(selectMonitor).click();
     }
 
-    public void setAddMonitorToCart(){
+    public void setAddMonitorToCart() {
         driver.findElement(addMonitorToCart).click();
     }
 
@@ -93,7 +93,7 @@ public class WebPage {
         driver.findElement(cartNavbar).click();
     }
 
-    public void setPlaceOrder(){
+    public void setPlaceOrder() {
         driver.findElement(placeOrder).click();
     }
 

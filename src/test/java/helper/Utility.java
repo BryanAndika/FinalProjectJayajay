@@ -28,20 +28,19 @@ public class Utility {
     }
 
     public static void startDriver() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new");
-        options.addArguments("--guest");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--remote-allow-origins=*");
-        options.addArguments("--disable-gpu");
-        options.addArguments("--window-size=1920,1080"); // Menentukan resolusi
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-    }
+            WebDriverManager.chromedriver().setup();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless=new");
+            options.addArguments("--guest");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--remote-allow-origins=*");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--window-size=1920,1080");
 
+            driver = new ChromeDriver(options);
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+    }
 
     public static void quitDriver() {
         // Memastikan driver tidak null sebelum mencoba menutupnya
@@ -50,5 +49,4 @@ public class Utility {
             driver = null; // Opsional: atur kembali ke null
         }
     }
-
 }

@@ -7,9 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {"pretty"},
-        // Tambahkan semua paket yang berisi kode yang ingin dijalankan.
-        // Biasanya ini mencakup Hooks, Step Definitions, dan Page Objects (jika Page Objects memiliki code yang dipanggil oleh Cucumber).
-        glue = {"stepDef", "pages", "helper"}, // Tambahkan 'pages' dan 'helper' jika ada code yang dipanggil di sini
+        glue = {"stepDef", "pages", "helper"},
         features = {"src/test/java/features"},
         tags = "@web"
 )
