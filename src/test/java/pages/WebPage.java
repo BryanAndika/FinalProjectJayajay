@@ -25,7 +25,7 @@ public class WebPage {
     By addMonitorToCart = By.xpath("(//a[normalize-space()='Add to cart'])[1]");
     By placeOrder = By.xpath("(//button[normalize-space()='Place Order'])[1]");
     By cartNavbar = By.xpath("(//a[normalize-space()='Cart'])[1]");
-    By totalPrice = By.id("(//h3[normalize-space()='1080'])[1]");
+    By totalPrice = By.xpath("//h3");
     By input_name = By.id("name");
     By input_country = By.id("country");
     By input_city = By.id("city");
@@ -79,11 +79,6 @@ public class WebPage {
         driver.findElement(addMonitorToCart).click();
     }
 
-
-//    public void assertErrMsg(String errmsg){
-//        driver.findElement(text_err_msg(errmsg)).isDisplayed();
-//    }
-
     public void fillOrderForm(String name, String country, String city,
                               String card, String month, String year) {
         driver.findElement(input_name).sendKeys(name);
@@ -112,10 +107,13 @@ public class WebPage {
 
     public void verifyTotalPrice(String expectedPrice) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        String actualPrice = driver.findElement(totalPrice).getText();
+        WebElement priceElement = wait.until(ExpectedConditions.visibilityOfElementLocated(totalPrice));
+
+        String actualPrice = priceElement.getText().trim();
+        System.out.println("DEBUG - Total price di halaman: " + actualPrice);
+
         assertThat(actualPrice)
                 .as("Expected total price: " + expectedPrice + " but was: " + actualPrice)
                 .isEqualTo(expectedPrice);
     }
-
 }

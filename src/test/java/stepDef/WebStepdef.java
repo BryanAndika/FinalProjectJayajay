@@ -111,4 +111,5 @@ public class WebStepdef {
     public void verifyTotalPriceIs(String expectedPrice) {
         webPage.verifyTotalPrice(expectedPrice);
     }
+
 }
