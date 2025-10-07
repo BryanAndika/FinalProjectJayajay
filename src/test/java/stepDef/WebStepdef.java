@@ -24,7 +24,6 @@ public class WebStepdef {
     }
 
 //  Phone
-
     @And("user go to phone section")
     public void userGoToPhoneSection() {
         webPage.setPhone_section();

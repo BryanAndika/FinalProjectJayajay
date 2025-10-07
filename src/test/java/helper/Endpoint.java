@@ -8,9 +8,8 @@ public class Endpoint {
 
     public static final String GET_LIST_USERS = host_dummyapi + "/user";
 
-//    public static final String GET_USER_BY_ID = host_gorestdummyapi + "/user/:id";
-
     public static final String CREATE_NEW_USERS = host_dummyapi + "/user/create";
 
-    public static final String DELETE_USERS = host_dummyapi + "/user" ;
+    public static final String DELETE_USERS = host_dummyapi + "/user/" ;
+
 }

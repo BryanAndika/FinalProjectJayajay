@@ -1,5 +1,6 @@
 package stepDef;
 
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,6 +13,8 @@ public class ApiStepDef {
     public ApiStepDef() {
         this.apiPage = new ApiPage();
     }
+
+//  Test get list data users
 
     @Given("prepare url for {string}")
     public void prepareUrlFor(String url) {
@@ -31,21 +34,11 @@ public class ApiStepDef {
     @Then("validation response body get list users")
     public void validationResponseBodyGetListUsers() {
         apiPage.validationResponseBodyGetListUsers();
-
     }
 
     @Then("validation response json with JSONSchema {string}")
     public void validationResponseJsonWithJSONSchema(String filename) {
         apiPage.validationResponseJsonWithJSONSchema(filename);
-    }
-
-    @Then("validation status code equal {int}")
-    public void validationStatusCodeEqual(int status_code) {
-        apiPage.validationStatusCodeEquals(status_code);
-    }
-
-    @Then("validation response body get user by id")
-    public void validationResponseBodyGetUserById() {
     }
 
     @And("hit api post create new user")
@@ -63,13 +56,10 @@ public class ApiStepDef {
         apiPage.hitApiDeleteUser();
     }
 
-    @And("hit api update new user")
-    public void hitApiUpdateNewUser() {
-        apiPage.hitUpdateNewUser();
-    }
 
     @Then("validation response body update user")
     public void validationResponseBodyUpdateUser() {
         apiPage.validationResponseBodyUpdateUser();
     }
+
 }

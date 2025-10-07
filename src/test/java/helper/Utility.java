@@ -43,10 +43,9 @@ public class Utility {
     }
 
     public static void quitDriver() {
-        // Memastikan driver tidak null sebelum mencoba menutupnya
         if (driver != null) {
             driver.quit();
-            driver = null; // Opsional: atur kembali ke null
+            driver = null;
         }
     }
 }

@@ -22,9 +22,6 @@ public class ApiPage {
             case "GET_LIST_USERS":
                 setURL = Endpoint.GET_LIST_USERS;
                 break;
-//            case "GET_USER_BY_ID":
-//                setURL = Endpoint.GET_USER_BY_ID;
-//                break;
             case "CREATE_NEW_USERS":
                 setURL = Endpoint.CREATE_NEW_USERS;
                 break;
@@ -51,16 +48,12 @@ public class ApiPage {
     }
 
     public void validationResponseBodyGetListUsers(){
-//        List<Object> id = res.jsonPath().getList("data.id");
         List<Object> firstName = res.jsonPath().getList("data.firstName");
         List<Object> lastName = res.jsonPath().getList("data.lastName");
-//        List<Object> picture = res.jsonPath().getList("data.picture");
         List<Object> title = res.jsonPath().getList("data.title");
 
-//        assertThat(id.get(0)).isNotNull();
         assertThat(firstName.get(0)).isNotNull();
         assertThat(lastName.get(0)).isNotNull();
-//        assertThat(picture.get(0)).isNotNull();
         assertThat(title.get(0)).isIn("mr", "ms", "miss", "mrs");
     }
 
@@ -71,17 +64,17 @@ public class ApiPage {
 
     public void validationResposeBodyPostCreateUser(){
         JsonPath jsonPathEvaluator = res.jsonPath();
-        String id = jsonPathEvaluator.get("id");
+        String id_string = jsonPathEvaluator.get("id");
         String firstName = jsonPathEvaluator.get("firstName");
         String lastName = jsonPathEvaluator.get("lastName");
         String title = jsonPathEvaluator.get("title");
 
-        assertThat(id).isNotNull();
+        assertThat(id_string).isNotNull();
         assertThat(firstName).isNotNull();
         assertThat(lastName).isNotNull();
         assertThat(title).isIn("mr", "ms", "miss", "mrs");
 
-        global_id = (id);
+        global_id = (id_string);
     }
 
     public void hitApiDeleteUser(){
@@ -105,4 +98,5 @@ public class ApiPage {
         assertThat(lastName).isNotNull();
         assertThat(title).isIn("mr", "ms", "miss", "mrs");
     }
+
 }

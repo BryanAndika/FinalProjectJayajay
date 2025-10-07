@@ -44,21 +44,22 @@ public class Models {
 
     public static Response deleteUser(String endpoint, String user_id) {
         setupHeaders();
-        String finalendpoint = endpoint + "/" + user_id;
+        String finalendpoint = endpoint.endsWith("/") ? endpoint + user_id : endpoint + "/" + user_id;
         return request.when().delete(finalendpoint);
     }
+
 
     public static Response updateUser(String endpoint, String user_id) {
         setupHeaders();
 
         String firstName = "Bryan";
         String lastName = "update";
-//        String email = generateRandomEmail();
+        String email = generateRandomEmail();
 
         JSONObject payload = new JSONObject();
         payload.put("name", firstName);
         payload.put("gender", lastName);
-//        payload.put("email", email);
+        payload.put("email", email);
 
         String finalendpoint = endpoint + user_id;
         return request.body(payload.toString()).when().patch(finalendpoint);
