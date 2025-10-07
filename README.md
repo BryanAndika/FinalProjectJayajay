@@ -24,8 +24,8 @@ Target    : DummyAPI.io (https://dummyapi.io/docs/user).
 Operations: Implementation of CRUD operations (Get Users, Create User, Delete User, Update User).
 
 How to Run Tests:
-Run API Tests    : ./gradlew apiTest
-Run Web UI Tests : ./gradlew webTest
+Run API Tests    : ./gradlew apiTest.
+Run Web UI Tests : ./gradlew webTest.
 
 Report Location:
 HTML: build/reports/cucumber/html/index.html
