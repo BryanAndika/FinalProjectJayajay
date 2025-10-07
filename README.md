@@ -4,14 +4,15 @@ Welcome to my Final Project Jayjay repository!
 
 This project implements a unified Automation Testing framework combining Web UI and Rest API testing within a single repository. The framework is built upon best practices such as the Page Object Model (POM) and Gherkin format, and is fully automated using GitHub Actions for Continuous Integration (CI).
 
-Tools dan Liblaries:
-Programming Language    : Java
-Build & Dependencies    :	Gradle
-Testing Framework       : Cucumber (Gherkin)	
-Web UI Testing          : Selenium WebDriver	
-API Testing             : Rest Assured	
-CI/CD                   : GitHub Actions	
-Version Control         :	Git & GitHub	
+The project relies on the following tools and libraries for robust automation:
+
+Programming Language: Java (Primary language for framework development)
+Build & Dependencies: Gradle (Project and dependency management)
+Testing Framework: Cucumber (Gherkin) (Used for Behavior-Driven Development (BDD) test case format)
+Web UI Testing: Selenium WebDriver (Automation of Web UI element interaction)
+API Testing: Rest Assured (Testing and validation of RESTful API services)
+CI/CD: GitHub Actions (Automation of test execution on specified events)
+Version Control: Git & GitHub (Source code management and collaboration)
 
 Testing Targets:
 1. Web UI Test
