@@ -30,7 +30,8 @@ Feature: Test Automation Rest API
     And hit api post create new user
     Then validation status code equals 200
     Then validation response body post create new users
-    And hit api delete new
+    Given prepare url for "DELETE_USERS"
+    When hit api delete new
     Then validation status code equals 200
 
   @api
