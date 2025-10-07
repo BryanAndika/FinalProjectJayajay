@@ -6,13 +6,13 @@ This project implements a unified Automation Testing framework combining Web UI 
 
 The project relies on the following tools and libraries for robust automation:
 
-Programming Language: Java (Primary language for framework development)
-Build & Dependencies: Gradle (Project and dependency management)
-Testing Framework: Cucumber (Gherkin) (Used for Behavior-Driven Development (BDD) test case format)
-Web UI Testing: Selenium WebDriver (Automation of Web UI element interaction)
-API Testing: Rest Assured (Testing and validation of RESTful API services)
-CI/CD: GitHub Actions (Automation of test execution on specified events)
-Version Control: Git & GitHub (Source code management and collaboration)
+Programming Language: Java.
+Build & Dependencies: Gradle.
+Testing Framework: Cucumber.
+Web UI Testing: Selenium WebDriver.
+API Testing: Rest Assured.
+CI/CD: GitHub Actions.
+Version Control: Git & GitHub.
 
 Testing Targets:
 1. Web UI Test
